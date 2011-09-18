@@ -10,7 +10,7 @@ class EndLine < Check
 	def check(file)
 		empty = 0
 		file.each_line do |line|
-			if line.strip.empty?
+			if line.strip.empty? then
 				empty += 1
 			else
 				empty = 0

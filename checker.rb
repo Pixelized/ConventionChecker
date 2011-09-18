@@ -8,6 +8,7 @@ class Checker
 	def check(file)
 		errors = 0
 		@checkers.each{|checker|
+			file.seek(0)
 			errors += checker.check(file)
 		}
 		return errors
