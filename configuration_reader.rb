@@ -16,12 +16,16 @@ class ConfigurationReader
 		pfile.each_line do |line|
 			@file += line
 		end
+		pfile.close
 	end
 
 	def read
 		js = JSON.parse(@file)
+		checkers = []
 		js.each {|k, v|
-			CheckerFactory.create(k, v)
+			checker = CheckerFactory.create(k, v)
+			checkers << checker if checker != nil
 		}
+		return checkers
 	end
 end # ConfigurationReader
