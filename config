@@ -1,0 +1,13 @@
+{
+	"EndLine": {
+		"number": 1
+	},
+	"Indentation": {
+		"mode": "tabs",
+		"size": 1
+	},
+	"AccessibilityOrder": {
+		"order": ["public", "protected", "private"],
+		"unique": true
+	}
+}
