@@ -14,7 +14,7 @@ class AccessibilityOrder < Check
 		l_private = 0
 
 		res = 0
-		i = 0
+		i = 1
 
 		file.each_line do |line|
 			if line.strip == "public:" then
