@@ -1,4 +1,7 @@
 {
+	"Braces": {
+		"oneline": true
+	},
 	"EndLine": {
 		"number": 1
 	},

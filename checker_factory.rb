@@ -1,6 +1,7 @@
 #coding: UTF-8
 
 require './checks/accessibility_order'
+require './checks/braces'
 require './checks/endline'
 require './checks/indentation'
 
@@ -9,6 +10,8 @@ class CheckerFactory
 		case name
 			when "AccessibilityOrder"
 				return AccessibilityOrder.new(attrs)
+			when "Braces"
+				return Braces.new(attrs)	
 			when "EndLine"
 				return EndLine.new(attrs)
 			when "Indentation"
