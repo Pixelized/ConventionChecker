@@ -17,7 +17,7 @@ class EndLine < Check
 			end
 		end
 		if empty != @number then
-			puts "#{empty} empty lines instead of #{@number} at end of file #{File.dirname(file)}/#{File.basename(file)}"
+			error(file, 0, "#{empty} empty lines instead of #{@number} at end of file")
 			return 1
 		else
 			return 0

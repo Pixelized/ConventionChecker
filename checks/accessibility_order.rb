@@ -19,19 +19,19 @@ class AccessibilityOrder < Check
 		file.each_line do |line|
 			if line.strip == "public:" then
 				if @unique and l_public != 0 then
-					puts "Multiple public section defined in #{File.dirname(file)}/#{File.basename(file)} (redefined line #{i})"
+					error(file, i, "Multiple public sections defined")
 					res += 1
 				end
 				l_public = i
 			elsif line.strip == "protected:" then
 				if @unique and l_protected != 0 then
-					puts "Multiple protected section defined in #{File.dirname(file)}/#{File.basename(file)} (redefined line #{i})"
+					error(file, i, "Multiple protected sections defined")
 					res += 1
 				end
 				l_protected = i
 			elsif line.strip == "private:" then
 				if @unique and l_private != 0 then
-					puts "Multiple private section defined in #{File.dirname(file)}/#{File.basename(file)} (redefined line #{i})"
+					error(file, i, "Multiple private sections defined")
 					res += 1
 				end
 				l_private = i
