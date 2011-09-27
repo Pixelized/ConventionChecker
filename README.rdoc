@@ -1,0 +1,5 @@
+= Convention Checker
+
+== Minimum Requirements
+* Ruby 1.9
+
