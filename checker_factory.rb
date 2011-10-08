@@ -9,8 +9,8 @@ class CheckerFactory
 		begin
 			Kernel.const_get(name).new(attrs)
 
-			rescue NameError
-				$stderr.puts "Check module #{name} unknown."
-			end
+		rescue NameError
+			$stderr.puts "Check module #{name} unknown."
+		end
 	end
 end # CheckerFactory
