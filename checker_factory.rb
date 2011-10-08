@@ -4,6 +4,7 @@ require './checks/accessibility_order'
 require './checks/braces'
 require './checks/endline'
 require './checks/indentation'
+require './checks/semicolon_space'
 
 class CheckerFactory
 	def self.create(name, attrs)
@@ -16,6 +17,8 @@ class CheckerFactory
 				return EndLine.new(attrs)
 			when "Indentation"
 				return Indentation.new(attrs)
+			when "SemicolonSpace"
+				return SemicolonSpace.new(attrs)
 			else
 				puts "Check module #{name} unknown."
 				return nil

@@ -12,5 +12,8 @@
 	"AccessibilityOrder": {
 		"order": ["public", "protected", "private"],
 		"unique": true
+	},
+	"SemicolonSpace": {
+		"number": 0
 	}
 }
