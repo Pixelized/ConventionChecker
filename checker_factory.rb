@@ -1,7 +1,5 @@
 #coding: UTF-8
 
-require './checks/semicolon_space'
-
 Dir[File.dirname(__FILE__) + '/checks/*.rb'].each{|file|
 	require File.dirname(file) + '/' + File.basename(file, File.extname(file))
 }
