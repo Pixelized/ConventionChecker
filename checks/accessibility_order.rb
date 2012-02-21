@@ -11,6 +11,7 @@ class AccessibilityOrder < Check
 	end
 
 	def check(file)
+		code = strip_comments(file.read)
 		l_public = 0
 		l_protected = 0
 		l_private = 0
@@ -18,7 +19,7 @@ class AccessibilityOrder < Check
 		res = 0
 		i = 1
 
-		file.each_line do |line|
+		code.each_line do |line|
 			if line.strip == "public:" then
 				if @unique and l_public != 0 then
 					error(file, i, "Multiple public sections defined")

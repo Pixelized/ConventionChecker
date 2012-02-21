@@ -10,10 +10,11 @@ class SemicolonSpace < Check
 	end
 
 	def check(file)
+		code = strip_comments(file.read)
 		empty = 0
 		res = 0
 		i = 1
-		file.each_line do |line|
+		code.each_line do |line|
 			line.scan(/(.*?);/).each{|sec|
 				spaces = sec[0].length - sec[0].rstrip.length
 				if spaces != @number then

@@ -10,10 +10,11 @@ class Braces < Check
 	end
 
 	def check(file)
+		code = strip_comments(file.read)
 		res = 0
 		i = 1
 
-		file.each_line do |line|
+		code.each_line do |line|
 			if line.count("{") > 0 then
 				if @oneline and line.strip == "{" then
 					res += 1

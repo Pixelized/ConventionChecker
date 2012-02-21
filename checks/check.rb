@@ -1,5 +1,9 @@
 #coding: UTF-8
 
+$LOAD_PATH << File.dirname(__FILE__) + '/..'
+
+require 'strip_comments'
+
 class Check
 	def check(file)
 		return false
