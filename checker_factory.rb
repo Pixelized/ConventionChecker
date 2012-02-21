@@ -1,7 +1,9 @@
 #coding: UTF-8
 
+$LOAD_PATH << File.dirname(__FILE__) + '/checks'
+
 Dir[File.dirname(__FILE__) + '/checks/*.rb'].each{|file|
-	require File.dirname(file) + '/' + File.basename(file, File.extname(file))
+	require File.basename(file, File.extname(file))
 }
 
 class CheckerFactory

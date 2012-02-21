@@ -1,7 +1,9 @@
 #coding: UTF-8
 
-require './checker'
-require './configuration_reader'
+$LOAD_PATH << File.dirname(__FILE__)
+
+require 'checker'
+require 'configuration_reader'
 
 if ARGV.length < 2 then
 	puts "Usage: ruby #{$0} <config file> <source files>"

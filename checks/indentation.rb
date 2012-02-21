@@ -1,6 +1,8 @@
 #coding: UTF-8
 
-require './checks/check'
+$LOAD_PATH << File.dirname(__FILE__) + '/..'
+
+require 'checks/check'
 
 class Indentation < Check
 	def initialize(attrs)

@@ -1,6 +1,8 @@
 #coding: UTF-8
 
-require './checker_factory'
+$LOAD_PATH << File.dirname(__FILE__)
+
+require 'checker_factory'
 
 require 'json'
 
